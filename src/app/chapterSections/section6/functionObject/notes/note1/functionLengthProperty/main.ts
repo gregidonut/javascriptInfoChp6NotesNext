@@ -1,4 +1,4 @@
-export default function () {
+export default function main() {
     type zeroArgHandler = () => void;
     type argedHandler = (arg: boolean) => boolean;
 

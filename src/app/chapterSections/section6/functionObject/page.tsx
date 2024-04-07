@@ -3,8 +3,8 @@
 import TaskList from "./tasks.mdx"
 import NotesList from "./notes.mdx"
 import React from "react";
-import Header from "../../../components/Header/header"
-import Main, {MainProps} from "../../../components/Main/main"
+import Header from "@/app/components/Header/header"
+import Main, {MainProps} from "@/app/components/Main/main"
 import "./main"
 
 export default function Index() {

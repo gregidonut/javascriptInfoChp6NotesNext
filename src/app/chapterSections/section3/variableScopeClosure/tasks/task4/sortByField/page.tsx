@@ -1,9 +1,11 @@
 'use client'
 
 import TaskContent from "./task.mdx"
-import React from "react";
-import Header from "../../../../../../components/Header/header"
-import Main, {MainProps} from "../../../../../../components/Main/main"
+import React, {useEffect} from "react";
+import Header from "@/app/components/Header/header"
+import Main, {MainProps} from "@/app/components/Main/main"
+import highlight from "@/app/utils/highlighting"
+
 import "./main"
 
 export default function Index(): React.JSX.Element {
@@ -15,6 +17,10 @@ export default function Index(): React.JSX.Element {
         contentStack,
         "article",
     )
+
+    useEffect(() => {
+        highlight();
+    }, []);
 
     return (
         <div id={"root"}>

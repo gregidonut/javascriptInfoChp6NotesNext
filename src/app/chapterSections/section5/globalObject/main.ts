@@ -1,4 +1,4 @@
-export default function() {
+export default function main() {
     alert('hello');
     window.alert('hello');
     globalThis.alert('hello');

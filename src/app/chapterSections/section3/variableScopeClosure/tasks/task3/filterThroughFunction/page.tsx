@@ -2,8 +2,8 @@
 
 import TaskContent from "../../task4/sortByField/task.mdx"
 import React from "react";
-import Header from "../../../../../../components/Header/header"
-import Main, {MainProps} from "../../../../../../components/Main/main"
+import Header from "@/app/components/Header/header"
+import Main, {MainProps} from "@/app/components/Main/main"
 import "./main"
 
 export default function Index(): React.JSX.Element {
