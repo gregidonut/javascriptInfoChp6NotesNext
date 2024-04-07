@@ -1,10 +1,11 @@
 'use client'
 
 // import SectionPageContent from "./tasks.mdx"
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../../../components/Header/header"
 import Main, {MainProps} from "../../../components/Main/main"
-import "./main"
+import main from "./main";
+
 
 export default function Index() {
     // const contentStack: MainProps["content"] = [
@@ -14,6 +15,10 @@ export default function Index() {
     const p = new MainProps(
         "Global Object",
     )
+
+    useEffect(() => {
+        main();
+    }, []);
 
     return (
         <div id={"root"}>

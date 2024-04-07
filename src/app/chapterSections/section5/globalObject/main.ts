@@ -1,6 +1,9 @@
-alert("hello");
-window.alert("hello");
-globalThis.alert("hello");
+export default function() {
+    alert('hello');
+    window.alert('hello');
+    globalThis.alert('hello');
 
-// const gLet = 5;
-// console.log(window.gLet);
+    // const gLet = 5;
+    // console.log(window.gLet);
+}
+

@@ -1,10 +1,10 @@
 'use client'
 
 import NoteContent from "./note.mdx"
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../../../../../../components/Header/header"
 import Main, {MainProps} from "../../../../../../components/Main/main"
-import "./main"
+import main from  "./main"
 
 export default function Index(): React.JSX.Element {
     const contentStack: MainProps["content"] = [
@@ -15,6 +15,10 @@ export default function Index(): React.JSX.Element {
         contentStack,
         "article",
     )
+
+    useEffect(() => {
+        main();
+    }, []);
 
     return (
         <div id={"root"}>
