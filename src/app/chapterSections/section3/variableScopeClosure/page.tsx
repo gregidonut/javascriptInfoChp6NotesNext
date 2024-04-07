@@ -1,17 +1,18 @@
 'use client'
 
-import FrontPageContent from "./FrontPageContent.mdx"
+import SectionPageContent from "./section.mdx"
 import React from "react";
-import Header from "./components/Header/header"
-import Main, {MainProps} from "./components/Main/main"
+import Header from "../../../components/Header/header"
+import Main, {MainProps} from "../../../components/Main/main"
+import "./main"
 
 export default function Index() {
     const contentStack: MainProps["content"] = [
-        FrontPageContent({}),
+        SectionPageContent({}),
     ]
 
     const p = new MainProps(
-        "Table of contents",
+        "Variable Scope, closure",
         contentStack,
     )
 

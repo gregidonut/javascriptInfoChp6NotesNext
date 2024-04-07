@@ -1,17 +1,20 @@
 'use client'
 
-import FrontPageContent from "./FrontPageContent.mdx"
+import TaskList from "./tasks.mdx"
+import NotesList from "./notes.mdx"
 import React from "react";
-import Header from "./components/Header/header"
-import Main, {MainProps} from "./components/Main/main"
+import Header from "../../../components/Header/header"
+import Main, {MainProps} from "../../../components/Main/main"
+import "./main"
 
 export default function Index() {
     const contentStack: MainProps["content"] = [
-        FrontPageContent({}),
+        NotesList({}),
+        TaskList({}),
     ]
 
     const p = new MainProps(
-        "Table of contents",
+        "Decorators and forwarding, call/apply",
         contentStack,
     )
 

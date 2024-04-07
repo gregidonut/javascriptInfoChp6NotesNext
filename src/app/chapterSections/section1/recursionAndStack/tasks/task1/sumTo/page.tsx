@@ -1,18 +1,20 @@
 'use client'
 
-import FrontPageContent from "./FrontPageContent.mdx"
+import TaskContent from "./task.mdx"
 import React from "react";
-import Header from "./components/Header/header"
-import Main, {MainProps} from "./components/Main/main"
+import Header from "../../../../../../components/Header/header"
+import Main, {MainProps} from "../../../../../../components/Main/main"
+import "./main"
 
-export default function Index() {
+export default function Index(): React.JSX.Element {
     const contentStack: MainProps["content"] = [
-        FrontPageContent({}),
+        TaskContent({}),
     ]
 
     const p = new MainProps(
-        "Table of contents",
+        "Sum all numbers till the given one",
         contentStack,
+        "article",
     )
 
     return (

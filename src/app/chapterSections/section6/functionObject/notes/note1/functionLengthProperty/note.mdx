@@ -1,0 +1,26 @@
+### function length property
+
+This took me an hour to understand but
+basically the code in the the ts file uses
+the `funcion.length` property to determine
+what kind of behavior the calling function --
+that requires function definitions as
+arguments -- will be called, relative to the
+parameters in their signature.
+
+I this case, for example, `handler` functions
+that are dfined at the `ask` function's call
+time, are checked whether they were defined
+with parameters o not; done through the
+`hancdler` function's `.length` property and
+if they were defined with parameters to always
+pass the `cofirm`'s result into them as an
+argument, and then do something with the
+return type (I actually haven't really
+understood exactly whether they specifically
+wanted a return type or just wanted to alert
+the argument passed, but I'm just logging it my
+decision, the explanation is cumbersome).
+Otherwise, if it wasn't defined with
+parameters then it will only be run if the
+value of the `confirm` function was true.
