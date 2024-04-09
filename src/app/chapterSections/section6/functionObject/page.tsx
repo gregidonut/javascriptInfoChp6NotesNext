@@ -8,20 +8,18 @@ import Main, {MainProps} from "@/app/components/Main/main"
 import "./main"
 
 export default function Index() {
-    const contentStack: MainProps["content"] = [
-        NotesList({}),
-        TaskList({}),
-    ]
-
-    const p = new MainProps(
-        "Function object, NFE",
-        contentStack,
-    )
-
     return (
         <div id={"root"}>
             <Header/>
-            <Main title={p.title} content={p.content} sectionOrArticle={p.sectionOrArticle}/>
+            <Main prop={
+                new MainProps(
+                    "Function object, NFE",
+                    [
+                        NotesList({}),
+                        TaskList({}),
+                    ],
+                )
+            }/>
         </div>
     );
 }

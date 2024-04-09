@@ -7,20 +7,18 @@ import Main, {MainProps} from "@/app/components/Main/main"
 import "./main"
 
 export default function Index(): React.JSX.Element {
-    const contentStack: MainProps["content"] = [
-        TaskContent({}),
-    ]
-
-    const p = new MainProps(
-        "Sum all numbers till the given one",
-        contentStack,
-        "article",
-    )
-
     return (
         <div id={"root"}>
             <Header/>
-            <Main title={p.title} content={p.content} sectionOrArticle={p.sectionOrArticle}/>
+            <Main prop={
+                new MainProps(
+                    "Sum all numbers till the given one",
+                    [
+                        TaskContent({}),
+                    ],
+                    "article",
+                )
+            }/>
         </div>
     );
 }

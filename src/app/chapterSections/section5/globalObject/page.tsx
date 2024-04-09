@@ -7,10 +7,6 @@ import main from "./main";
 
 
 export default function Index() {
-    const p = new MainProps(
-        "Global Object",
-    )
-
     useEffect(() => {
         main();
     }, []);
@@ -18,7 +14,11 @@ export default function Index() {
     return (
         <div id={"root"}>
             <Header/>
-            <Main title={p.title} content={p.content} sectionOrArticle={p.sectionOrArticle}/>
+            <Main prop={
+                new MainProps(
+                    "Global Object",
+                )
+            }/>
         </div>
     );
 }

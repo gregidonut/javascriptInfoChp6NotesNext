@@ -8,15 +8,6 @@ import highlight from "@/app/utils/highlighting"
 import "./main"
 
 export default function Index(): React.JSX.Element {
-    const contentStack: MainProps["content"] = [
-        TaskContent({}),
-    ]
-    const p = new MainProps(
-        "task 2",
-        contentStack,
-        "article",
-    )
-
     useEffect(() => {
         highlight();
     }, []);
@@ -24,7 +15,15 @@ export default function Index(): React.JSX.Element {
     return (
         <div id={"root"}>
             <Header/>
-            <Main title={p.title} content={p.content} sectionOrArticle={p.sectionOrArticle}/>
+            <Main prop={
+                new MainProps(
+                    "task 2",
+                    [
+                        TaskContent({}),
+                    ],
+                    "article",
+                )
+            }/>
         </div>
     );
 }

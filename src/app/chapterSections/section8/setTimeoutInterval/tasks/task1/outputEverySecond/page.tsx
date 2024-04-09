@@ -7,19 +7,18 @@ import Main, {MainProps} from "../../../../../../components/Main/main"
 import "./main"
 
 export default function Index(): React.JSX.Element {
-    const contentStack: MainProps["content"] = [
-        TaskContent({}),
-    ]
-    const p = new MainProps(
-        "task 2",
-        contentStack,
-        "article",
-    )
-
     return (
         <div id={"root"}>
             <Header/>
-            <Main title={p.title} content={p.content} sectionOrArticle={p.sectionOrArticle}/>
+            <Main prop={
+                new MainProps(
+                    "Task 1",
+                    [
+                        TaskContent({}),
+                    ],
+                    "article",
+                )
+            }/>
         </div>
     );
 }
