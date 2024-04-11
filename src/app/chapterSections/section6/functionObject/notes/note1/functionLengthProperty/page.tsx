@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import NoteContent from "./note.mdx"
-import React, {useEffect} from "react";
-import Header from "@/app/components/Header/header"
-import Main, {MainProps} from "@/app/components/Main/main"
-import main from  "./main"
+import NoteContent from "./note.mdx";
+import React, { useEffect } from "react";
+import Header from "@/app/components/Header/header";
+import Main, { MainProps } from "@/app/components/Main/main";
+import main from "./main";
 
 export default function Index(): React.JSX.Element {
     useEffect(() => {
@@ -13,16 +13,16 @@ export default function Index(): React.JSX.Element {
 
     return (
         <div id={"root"}>
-            <Header/>
-            <Main prop={
-                new MainProps(
-                    "note 1",
-                    [
-                        NoteContent({}),
-                    ],
-                    "article",
-                )
-            }/>
+            <Header />
+            <Main
+                prop={
+                    new MainProps(
+                        "note 1",
+                        [NoteContent({})],
+                        "article",
+                    )
+                }
+            />
         </div>
     );
 }

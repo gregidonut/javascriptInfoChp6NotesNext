@@ -1,25 +1,24 @@
-'use client'
+"use client";
 
-import TaskList from "./tasks.mdx"
-import NotesList from "./notes.mdx"
+import TaskList from "./tasks.mdx";
+import NotesList from "./notes.mdx";
 import React from "react";
-import Header from "@/app/components/Header/header"
-import Main, {MainProps} from "@/app/components/Main/main"
-import "./main"
+import Header from "@/app/components/Header/header";
+import Main, { MainProps } from "@/app/components/Main/main";
+import "./main";
 
 export default function Index() {
     return (
         <div id={"root"}>
-            <Header/>
-            <Main prop={
-                new MainProps(
-                    "Decorators and forwarding, call/apply",
-                    [
-                        NotesList({}),
-                        TaskList({}),
-                    ],
-                )
-            }/>
+            <Header />
+            <Main
+                prop={
+                    new MainProps(
+                        "Decorators and forwarding, call/apply",
+                        [NotesList({}), TaskList({})],
+                    )
+                }
+            />
         </div>
     );
 }

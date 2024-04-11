@@ -54,7 +54,7 @@ div#root {
 }
 
 a:link {
-    color: #6272A4;
+    color: #6272a4;
 }
 
 a:visited {
@@ -62,7 +62,7 @@ a:visited {
 }
 
 a:hover {
-    color: #6272A4;
+    color: #6272a4;
 }
 
 a:active {
@@ -74,18 +74,19 @@ a:focus {
 }
 
 code {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     background: #44475a;
 }
 
 pre {
     padding: 2rem;
-    border: #44475a solid .2rem;
+    border: #44475a solid 0.2rem;
 
     width: 100%;
     overflow-x: auto;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 4rem;
 }

@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import TaskContent from "./task.mdx"
-import React, {useEffect} from "react";
-import Header from "@/app/components/Header/header"
-import Main, {MainProps} from "@/app/components/Main/main"
-import highlight from "@/app/utils/highlighting"
-import "./main"
+import TaskContent from "./task.mdx";
+import React, { useEffect } from "react";
+import Header from "@/app/components/Header/header";
+import Main, { MainProps } from "@/app/components/Main/main";
+import highlight from "@/app/utils/highlighting";
+import "./main";
 
 export default function Index(): React.JSX.Element {
     useEffect(() => {
@@ -14,16 +14,16 @@ export default function Index(): React.JSX.Element {
 
     return (
         <div id={"root"}>
-            <Header/>
-            <Main prop={
-                new MainProps(
-                    "task 5",
-                    [
-                        TaskContent({}),
-                    ],
-                    "article",
-                )
-            }/>
+            <Header />
+            <Main
+                prop={
+                    new MainProps(
+                        "task 5",
+                        [TaskContent({})],
+                        "article",
+                    )
+                }
+            />
         </div>
     );
 }

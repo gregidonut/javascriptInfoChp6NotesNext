@@ -36,5 +36,4 @@ export default function main() {
             return result;
         } as argedHandler,
     );
-
 }
